@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+        <item
+            android:id="@+id/oneEuro"
+            android:checkable="true"
+            android:enabled="true"
+            android:icon="@drawable/ic_baseline_check_box_outline_blank_24"
+            android:title="\u20AC1.00 Or Less"
+            android:visible="true" />
+        <item
+            android:id="@+id/oneToOneFifty"
+            android:checkable="true"
+            android:enabled="true"
+            android:icon="@drawable/ic_baseline_check_box_outline_blank_24"
+            android:title="\u20AC1.00 To \u20AC1.50"
+            android:visible="true" />
+        <item
+            android:id="@+id/oneFiftyToTwo"
+            android:checkable="true"
+            android:enabled="true"
+            android:icon="@drawable/ic_baseline_check_box_outline_blank_24"
+            android:title="\u20AC1.50 To \u20AC2.00"
+            android:visible="true" />
+        <item
+            android:id="@+id/twoToTwoFifty"
+            android:checkable="true"
+            android:enabled="true"
+            android:icon="@drawable/ic_baseline_check_box_outline_blank_24"
+            android:title="\u20AC2.00 To \u20AC2.50"
+            android:visible="true" />
+        <item
+            android:id="@+id/twoFiftyToThree"
+            android:checkable="true"
+            android:enabled="true"
+            android:icon="@drawable/ic_baseline_check_box_outline_blank_24"
+            android:title="\u20AC2.50 To \u20AC3.00"
+            android:visible="true" />
+        <item
+            android:id="@+id/overThree"
+            android:checkable="true"
+            android:enabled="true"
+            android:icon="@drawable/ic_baseline_check_box_outline_blank_24"
+            android:title="\u20AC3.00 Or More"
+            android:visible="true" />
+
+</menu>

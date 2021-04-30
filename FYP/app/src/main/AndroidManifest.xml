@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.fyp">
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"></uses-permission>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-feature android:name="android.hardware.camera"
+        android:required="true" />
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/app_icon"
+        android:roundIcon="@mipmap/app_icon_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:label="SmartPark">
+
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.android.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"></meta-data>
+        </provider>
+
+        <meta-data android:name="com.google.android.geo.API_KEY"
+            android:value="@string/map_key"></meta-data>
+        <activity android:name=".MainActivity"
+            android:label="SmartPark"
+
+            >
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="UserPage"
+            android:label="User Details"
+            android:screenOrientation="portrait">
+
+            </activity>
+        <activity android:name=".Maps"
+            android:label="Maps"
+            android:theme="@style/SecondAppTheme"
+            android:screenOrientation="portrait">
+            </activity>
+        <activity android:name=".TextRecognitionCamera"
+            android:label="Add New Parking Meter"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="com.google.firebase.ml.vision.DEPENDENCIES"
+                android:value="ocr" />
+        </activity>
+        <activity android:name=".CheckNewMeter"
+            android:label="Confirm Information"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity android:name=".Availability"
+            android:label="Availability"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+        <activity android:name=".Planner"
+            android:label="Journey Planner"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"> >
+
+        </activity>
+
+        <activity android:name=".JourneyPlannerResults"
+            android:label="Journey Planner Results"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"> >
+
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts"
+            />
+
+    </application>
+
+</manifest>

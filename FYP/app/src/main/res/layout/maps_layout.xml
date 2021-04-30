@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <include layout="@layout/toolbar" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/frame">
+
+
+            <fragment
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context="com.example.fyp.Maps" >
+            </fragment>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/inputLocation"
+                    android:layout_width="355dp"
+                    android:layout_height="60dp"
+                    android:background="#88000000"
+                    android:fontFamily="@font/roboto"
+                    android:gravity="center|left"
+                    android:hint="Enter A Location"
+                    android:inputType="textShortMessage|textCapWords"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#FFFFFF"
+                    app:boxCornerRadiusBottomEnd="40dp"
+                    app:boxCornerRadiusBottomStart="40dp"
+                    app:boxCornerRadiusTopEnd="40dp"
+                    app:boxCornerRadiusTopStart="40dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.3"
+                    tools:layout_editor_absoluteX="170dp"
+                    tools:layout_editor_absoluteY="128dp" />
+
+                <ImageButton
+                    android:id="@+id/searchLocation"
+                    android:layout_width="30dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="0"
+                    android:background="#88000000"
+                    android:onClick="searchLocation"
+                    app:srcCompat="@drawable/ic_baseline_search_24" />
+
+                <ImageButton
+                    android:id="@+id/clear"
+                    android:layout_width="30dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="0"
+                    android:background="#88000000"
+                    android:onClick="clearSearch"
+                    app:srcCompat="@drawable/ic_baseline_clear_24" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="bottom"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/bottomButton"
+                    android:layout_width="310dp"
+                    android:layout_height="110dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_button"
+                    android:fontFamily="@font/roboto"
+                    android:gravity="center|top"
+                    android:onClick="showDetailedInfo"
+                    android:text="Button"
+                    android:textColor="#000000"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:visibility="invisible"
+                    app:cornerRadius="200sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="461dp"
+                android:gravity="bottom"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <ProgressBar
+                    android:id="@+id/mapsProgressBar"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:visibility="invisible" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bottomTextLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_gravity="bottom"
+                android:orientation="horizontal"
+                android:visibility="invisible">
+
+                <TextView
+                    android:id="@+id/bottomPrice"
+                    android:layout_width="125dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:background="#232323"
+                    android:drawableRight="@color/colorAccent"
+                    android:drawableBottom="@color/colorAccent"
+                    android:fontFamily="@font/roboto"
+                    android:gravity="center|left"
+                    android:paddingLeft="5dp"
+                    android:text="Price"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    app:drawableTint="@color/colorAccent" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="70dp"
+                    android:layout_centerVertical="false"
+                    android:layout_toLeftOf="@id/tvText"
+                    android:background="#86ECFC"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.498"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.6" />
+
+                <TextView
+                    android:id="@+id/bottomCap"
+                    android:layout_width="200dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="right|fill|top"
+                    android:layout_weight="1"
+                    android:background="#232323"
+                    android:fontFamily="@font/roboto"
+                    android:gravity="center|left"
+                    android:paddingLeft="5dp"
+                    android:text="Capacity"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bottomTextLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_gravity="bottom"
+                android:orientation="vertical"
+                android:visibility="invisible">
+
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_centerVertical="false"
+                    android:background="#86ECFC"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.498"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.6" />
+
+                <TextView
+                    android:id="@+id/bottomHours"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#232323"
+                    android:fontFamily="@font/roboto"
+                    android:gravity="center|left"
+                    android:paddingLeft="5dp"
+                    android:text="Hours"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/busynessLayout"
+                android:layout_width="120dp"
+                android:layout_height="160dp"
+                android:layout_gravity="bottom|center"
+                android:gravity="center|top"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/busynessButton"
+                    android:layout_width="10dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center|top"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_button"
+                    android:fontFamily="@font/roboto"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:onClick="checkBusyness"
+                    android:text="Availability"
+                    android:textColor="#000000"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:visibility="invisible"
+                    app:cornerRadius="200sp"
+                    app:iconPadding="0dp" />
+            </LinearLayout>
+
+
+        </FrameLayout>
+    </LinearLayout>
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigation"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:menu="@menu/navitems" />
+
+
+
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

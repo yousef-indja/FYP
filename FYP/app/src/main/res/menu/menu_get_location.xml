@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+<item
+        android:id="@+id/addMeter"
+        android:icon="@drawable/ic_baseline_add_circle_outline_24"
+        android:title="add new meter"
+        android:onClick="addNewMeter"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/planner"
+        android:icon="@drawable/planner"
+        android:title="add new meter"
+        android:onClick="openPlanner"
+        app:showAsAction="always" />
+
+</menu>

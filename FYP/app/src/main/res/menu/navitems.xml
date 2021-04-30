@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/byTariff"
+        android:enabled="true"
+        android:title="By Hourly Tariff"
+        android:visible="true">
+        <menu>
+
+            <item
+                android:id="@+id/free"
+                android:checkable="true"
+                android:enabled="true"
+                android:icon="@drawable/ic_baseline_check_box_outline_blank_24"
+                android:title="Free Now"
+                android:visible="true" />
+            <item
+                android:id="@+id/oneEuro"
+                android:checkable="true"
+                android:enabled="true"
+                android:icon="@drawable/ic_baseline_check_box_outline_blank_24"
+                android:title="\u20AC1.00 Or Less"
+                android:visible="true" />
+            <item
+                android:id="@+id/oneToOneFifty"
+                android:checkable="true"
+                android:enabled="true"
+                android:icon="@drawable/ic_baseline_check_box_outline_blank_24"
+                android:title="\u20AC1.00 To \u20AC1.50"
+                android:visible="true" />
+            <item
+                android:id="@+id/oneFiftyToTwo"
+                android:checkable="true"
+                android:enabled="true"
+                android:icon="@drawable/ic_baseline_check_box_outline_blank_24"
+                android:title="\u20AC1.50 To \u20AC2.00"
+                android:visible="true" />
+            <item
+                android:id="@+id/twoToTwoFifty"
+                android:checkable="true"
+                android:enabled="true"
+                android:icon="@drawable/ic_baseline_check_box_outline_blank_24"
+                android:title="\u20AC2.00 To \u20AC2.50"
+                android:visible="true" />
+            <item
+                android:id="@+id/twoFiftyToThree"
+                android:checkable="true"
+                android:enabled="true"
+                android:icon="@drawable/ic_baseline_check_box_outline_blank_24"
+                android:title="\u20AC2.50 To \u20AC3.00"
+                android:visible="true" />
+            <item
+                android:id="@+id/overThree"
+                android:checkable="true"
+                android:enabled="true"
+                android:icon="@drawable/ic_baseline_check_box_outline_blank_24"
+                android:title="\u20AC3.00 Or More"
+                android:visible="true" />
+        </menu>
+    </item>
+
+
+
+    <item
+        android:id="@+id/markerAmount"
+        android:title="Marker Amount"
+        app:showAsAction="never">
+
+        <menu>
+        <item
+            android:id="@+id/allMarkers"
+            android:checkable="true"
+            android:enabled="true"
+            android:icon="@drawable/ic_baseline_check_box_outline_blank_24"
+            android:title="All Markers"
+            android:visible="true" />
+        <item
+            android:id="@+id/oneK"
+            android:checkable="true"
+            android:enabled="true"
+            android:icon="@drawable/ic_baseline_check_box_outline_blank_24"
+            android:title="1 Kilometer"
+            android:visible="true" />
+
+        <item
+            android:id="@+id/twoK"
+            android:checkable="true"
+            android:enabled="true"
+            android:icon="@drawable/ic_baseline_check_box_outline_blank_24"
+            android:title="2 Kilometers"
+            android:visible="true" />
+
+        <item
+            android:id="@+id/threeK"
+            android:checkable="true"
+            android:enabled="true"
+            android:icon="@drawable/ic_baseline_check_box_outline_blank_24"
+            android:title="3 Kilometers"
+            android:visible="true" />
+
+        <item
+            android:id="@+id/fourK"
+            android:checkable="true"
+            android:enabled="true"
+            android:icon="@drawable/ic_baseline_check_box_outline_blank_24"
+            android:title="4 Kilometers"
+            android:visible="true" />
+
+        <item
+            android:id="@+id/fiveK"
+            android:checkable="true"
+            android:enabled="true"
+            android:icon="@drawable/ic_baseline_check_box_outline_blank_24"
+            android:title="5 Kilometers"
+            android:visible="true" />
+        </menu>
+
+    </item>
+
+
+
+    <item
+        android:id="@+id/apply"
+        android:enabled="true"
+        android:title="APPLY"
+        android:visible="true"
+        android:icon="@drawable/ic_baseline_arrow_forward_24"/>
+
+
+
+
+</menu>

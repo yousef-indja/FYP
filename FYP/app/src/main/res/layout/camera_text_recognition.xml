@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#232323">
+
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="match_parent"
+        android:layout_height="550dp"
+        android:layout_margin="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginRight="9dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"></ImageView>
+
+    <TextView
+        android:id="@+id/captureInfo"
+        android:layout_width="360dp"
+        android:layout_height="97dp"
+        android:fontFamily="@font/roboto"
+        android:gravity="center"
+        android:text='Capture an image of the information provided on the parking meter. Then press "Detetect".'
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.345" />
+
+    <TextView
+        android:id="@+id/text_display"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/image_view"
+        android:layout_margin="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginRight="9dp"
+        android:layout_marginBottom="147dp"
+        android:textSize="10dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/capture_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_view"
+        app:layout_constraintVertical_bias="0.97"></TextView>
+
+    <Button
+        android:id="@+id/capture_image"
+        android:layout_width="370dp"
+        android:layout_height="45dp"
+        android:background="@drawable/rounded_button"
+        android:fontFamily="@font/roboto"
+        android:layout_above="@id/detect_image"
+        android:layout_margin="10dp"
+        android:text="Capture"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:backgroundTint="@color/colorAccent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/image_view"
+        app:layout_constraintVertical_bias="0.877"></Button>
+
+    <Button
+        android:id="@+id/detect_image"
+        android:layout_width="370dp"
+        android:layout_height="45dp"
+        android:background="@drawable/rounded_button"
+        android:fontFamily="@font/roboto"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:backgroundTint="@color/colorAccent"
+        android:layout_margin="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginRight="9dp"
+        android:layout_marginBottom="33dp"
+        android:text="Detect"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/capture_image"></Button>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
